@@ -6,6 +6,7 @@ namespace CatOwners.Repository
 {
     public interface IPersonRepository
     {
-        Task<IList<Person>> ReadPeople();
+        IList<Person> ReadPeople();
+        Task<IList<Person>> ReadPeopleAsync();
     }
 }

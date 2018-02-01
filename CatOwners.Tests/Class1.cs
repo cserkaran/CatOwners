@@ -11,7 +11,7 @@ namespace CatOwners.Tests
         public void Test_1()
         {
             IPersonRepository repository = new PersonRepository();
-            IList<Person> people = repository.ReadPeople().Result;
+            IList<Person> people = repository.ReadPeople();
         }
     }
 }
