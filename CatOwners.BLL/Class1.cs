@@ -6,7 +6,7 @@ namespace CatOwners.Bll
     {
         private IPersonRepository personRepository;
 
-        public void ReadCatOwners()
+        public void GetCatsByOwnerGender()
         {
             personRepository.ReadPeople();
         }
