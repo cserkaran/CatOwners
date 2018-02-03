@@ -7,12 +7,27 @@ using System.Linq;
 
 namespace PetOwners.Bll
 {
+    /// <summary>
+    /// IAppController implementation.
+    /// </summary>
+    /// <seealso cref="PetOwners.Interfaces.IAppController" />
     [Export(typeof(IAppController))]
     public class AppController : IAppController
     {
+        /// <summary>
+        /// Gets or sets the person repository.
+        /// </summary>
+        /// <value>
+        /// The IPersonRepository to read data from a data source.
+        /// </value>
         [Import(typeof(IPersonRepository))]
         private IPersonRepository PersonRepository { get; set; }
 
+        /// <summary>
+        /// Reads the sorted cat names by gender.
+        /// </summary>
+        /// <returns><see cref="IDictionary"/>object where key is the gender of the owner
+        /// and value is list of cat names sorted by their name</returns>
         public IDictionary<string, List<string>> ReadSortedCatNamesByGender()
         {
             var people = PersonRepository.ReadPeople();
@@ -30,6 +45,13 @@ namespace PetOwners.Bll
             return catsByGender;
         }
 
+        /// <summary>
+        /// Sorts the name of the pets.
+        /// </summary>
+        /// <param name="people">The person list.</param>
+        /// <param name="petType">Type of the pet.</param>
+        /// <param name="sortOrder">SortOrder type which is Ascending,Descending or Unspecified.</param>
+        /// <returns></returns>
         private List<string> PetNamesInSortOrder(List<Person> people,PetType petType,SortOrder sortOrder)
         {
             if (people == null)

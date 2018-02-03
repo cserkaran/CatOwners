@@ -1,40 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition.Hosting;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace PetOwners.Infrastructure
 {
+    /// <summary>
+    /// Provider catalog for MEF
+    /// </summary>
     public class CatalogProvider
     {
+
+        /// <summary>
+        /// Gets the<see cref="SafeDirectoryCatalog"/>.
+        /// </summary>
+        /// <value>
+        /// The directory catalog.
+        /// </value>
         public static SafeDirectoryCatalog DirectoryCatalog
         {
             get
             {
-                var catalog = new SafeDirectoryCatalog(@"C:\Data\KARAN\Learning\CatOwners\Build\");
-
-                return catalog;
-            }
-        }
-    
-
-        /// <summary>
-        /// Gets the assembly catalogs.
-        /// </summary>
-        /// <value></value>
-        public static AggregateCatalog AssemblyCatalogs
-        {
-            get
-            {
-                var catalog = new AggregateCatalog();
-                var asms = AssemblyHelper.Assemblies;
-                foreach (var assembly in asms)
-                {
-                    catalog.Catalogs.Add(new AssemblyCatalog(assembly));
-                }
-
+                var catalog = new SafeDirectoryCatalog(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
                 return catalog;
             }
         }

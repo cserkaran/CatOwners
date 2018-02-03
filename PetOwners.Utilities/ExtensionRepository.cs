@@ -9,6 +9,9 @@ namespace PetOwners.Infrastructure
     /// </summary>
     public class ExtensionRepository
     {
+        /// <summary>
+        /// The lazy instance for singleton pattern.
+        /// </summary>
         private static readonly Lazy<ExtensionRepository> LazyInstance =
             new Lazy<ExtensionRepository>(() => new ExtensionRepository());
 
@@ -17,6 +20,9 @@ namespace PetOwners.Infrastructure
         /// </summary>
         private bool isLoaded;
 
+        /// <summary>
+        /// The directory catalog to compose MEF exports and imports
+        /// </summary>
         private SafeDirectoryCatalog _catalog;
 
         /// <summary>
