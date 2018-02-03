@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CatOwners.Repository
+namespace CatOwners.Interfaces
 {
     public interface IPersonRepository
     {

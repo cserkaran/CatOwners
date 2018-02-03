@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;
+//using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace CatOwners.Utilities
+namespace CatOwners.Infrastructure
 {
     public static class HttpClientHelper
     {

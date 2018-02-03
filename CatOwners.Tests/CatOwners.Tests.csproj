@@ -68,6 +68,14 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CatOwners.BLL\CatOwners.Bll.csproj">
+      <Project>{ccd86914-5cf0-46e2-be02-4a6b03de2d82}</Project>
+      <Name>CatOwners.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CatOwners.Interfaces\CatOwners.Interfaces.csproj">
+      <Project>{1c097602-579c-4485-a646-3809085fb333}</Project>
+      <Name>CatOwners.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CatOwners.Model\CatOwners.Model.csproj">
       <Project>{d174f32f-8df5-49d6-a91a-54a066d052b8}</Project>
       <Name>CatOwners.Model</Name>
@@ -76,9 +84,9 @@
       <Project>{8e476193-2e76-46d1-b000-fbee04d66a0c}</Project>
       <Name>CatOwners.Repository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CatOwners.Utilities\CatOwners.Utilities.csproj">
+    <ProjectReference Include="..\CatOwners.Utilities\CatOwners.Infrastructure.csproj">
       <Project>{1b4fe3fc-f933-43ae-b4a6-9466ad3b3f63}</Project>
-      <Name>CatOwners.Utilities</Name>
+      <Name>CatOwners.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
