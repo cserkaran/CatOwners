@@ -10,7 +10,7 @@ An app to consume the json and output a list of all the cats in alphabetical ord
     - Make sure PetOwners.UI is set as startup project.
     - Press F5. Console window will appear with the required output.
 
-# Steps to run Tests
+# Steps to Run the Tests
     - Open Test Explorer and build solution. 6 Unit tests will be listed.
     - Run the same from Test Explorer. All are passing.
 
@@ -21,5 +21,5 @@ An app to consume the json and output a list of all the cats in alphabetical ord
     PetOwners.Model - Contains Domain Model classes.
     PetOwners.Repository - Repository pattern implementation.
     PetOwners.UI - Console App to read the data from Controller and display. 
-    PetOwners.Tests - Unit test projects.
+    PetOwners.Tests - Unit test project.
 
